@@ -1,0 +1,3 @@
+--INSERIR CHAVE ESTRANGEIRA
+
+ALTER TABLE fVendas ADD CONSTRAINT fk_Cliente FOREIGN KEY (id_cliente) REFERENCES dClientes (id_Cliente);

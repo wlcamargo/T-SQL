@@ -1,0 +1,16 @@
+--AULA DE OPERADORES LÓGICOS
+
+--IGUAL
+-->
+-->= MAIOR OU IGUAL
+--<
+--MENOR OU IGUAL
+--AND	
+--BETWEEN	
+--EXISTS	
+--IN	
+--LIKE	
+--NOT	
+--OR	
+
+

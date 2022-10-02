@@ -1,0 +1,53 @@
+--AULA DE FUNCTION ESCALAR
+
+--CRIA TABELA
+CREATE TABLE TB_NOMES (
+	NOME VARCHAR(50)
+)
+GO
+
+--INSERE DADOS NA TABELA
+INSERT INTO TB_NOMES VALUES ('wallace')
+INSERT INTO TB_NOMES VALUES ('WALLACE')
+INSERT INTO TB_NOMES VALUES ('TULIO')
+INSERT INTO TB_NOMES VALUES ('tUlIO')
+
+--CRIA FUNÇÃO
+CREATE FUNCTION dbo.FORMATA_LETRAS_PADRAO (
+	@Nome varchar(250)
+)
+RETURNS varchar(250)
+AS
+BEGIN
+	DECLARE @Pos tinyint = 1
+	DECLARE @Ret varchar(250) = ''
+
+WHILE (@Pos < LEN(@Nome) + 1)
+  BEGIN
+	IF @Pos = 1
+	  BEGIN
+		--FORMATA 1.LETRA DA "FRASE"
+		SET @Ret += UPPER(SUBSTRING(@Nome, @Pos, 1))
+	  END
+	ELSE IF (SUBSTRING(@Nome, (@Pos-1), 1) = ' ' 
+                AND SUBSTRING(@Nome, (@Pos+2), 1) <> ' ') AND (@Pos+1) <> LEN(@Nome)
+	  BEGIN
+		--FORMATA 1.LETRA DE "CADA INTERVALO""
+		SET @Ret += UPPER(SUBSTRING(@Nome, @Pos, 1))
+	  END
+	ELSE
+	  BEGIN
+		--FORMATA CADA LETRA RESTANTE
+		SET @Ret += LOWER(SUBSTRING(@Nome,@Pos, 1))
+	  END
+
+	SET @Pos += 1
+  END
+
+  RETURN @Ret
+END
+GO
+------------------------------------------------------
+--CHAMADA DA FUNÇÃO
+SELECT dbo.FORMATA_LETRAS_PADRAO(NOME) as Nome from TB_NOMES
+GO
