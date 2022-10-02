@@ -14,4 +14,4 @@ Os Scripts estão separados por tipo, tais como:
 
 - DBA (Scripts Encontrados na Web para Administração Básica do Banco de Dados)
 
-- Exemplos de Trigger, Function, Role e Procedure.
+- Exemplos de Trigger, Function, Rule e Procedure.
