@@ -1,0 +1,1 @@
+DATA_REGISTRO >= concat('01','/',MONTH(GETDATE()),'/',YEAR(GETDATE()))
