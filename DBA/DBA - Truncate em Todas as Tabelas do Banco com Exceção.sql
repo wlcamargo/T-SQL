@@ -1,22 +1,18 @@
---TRUNCATE EM TODAS AS TABELAS DO BANCO DE DADOS COM EXCEÇÃO
 
-USE BANCO_DADOS
-GO
-	 
+
+
 Declare @Tabelas Table (Idx Int Identity(1,1), TblName Varchar(100))             
 
 Insert into @Tabelas (TblName)    
 
-=============================================================================
--- BLOCO ONDE USO A EXCEÇÃO DE TABELAS QUE NÃO QUERO APAGAR
+-- Clausula da Exceção na tabela que não deseja fazer truncate --> TABLE_NAME
 Select 
 	Table_Name 
 From 
 	Information_Schema.Tables  
 Where 
 	Table_Type = 'Base Table' 
-	and Table_NAME <> 'TABELAS QUE NAO QUERO APAGAR'   
-=============================================================================
+	and Table_NAME <> 'FATO_MOVIMENTACAO_ITEM'           
      
 Declare @Start Int             
 Declare @End Int             
