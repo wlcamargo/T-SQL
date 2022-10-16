@@ -2,7 +2,7 @@
 
 Curso de Linguagem T-SQL no SQL Server, hospedado na plataforma Hotmart em parceria com a Escola da Análise Dados. 
 
-Principais referências - Felipe Mafra, Power Tuning, Alessandro Trovato, Boson Treinamentos e DBA PRO.
+Principais referências - Felipe Mafra, Power Tuning, Dirceu Resende, Alessandro Trovato, Boson Treinamentos e DBA PRO.
 
 Data do desenvolvimento - agosto e setembro de 2022.
 
