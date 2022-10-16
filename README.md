@@ -1,8 +1,15 @@
 # T-SQL
 
-Scripts de T-SQL com foco em Análise de Dados
+Curso de Linguagem T-SQL no SQL Server, hospedado na plataforma Hotmart em parceria com a Escola da Análise Dados. 
 
-------------------------------------------------------------
+Principais referências - Felipe Mafra, Power Tuning, Alessandro Trovato, Boson Treinamentos e DBA PRO.
+
+Data do desenvolvimento - agosto e setembro de 2022.
+
+Desenvolvedor - Wallace Camargo
+
+
+# Scripts de T-SQL com foco em Análise de Dados
 
 Os Scripts estão separados por tipo, tais como:
 
